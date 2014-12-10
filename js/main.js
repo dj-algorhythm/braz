@@ -16,7 +16,7 @@ $(document).ready(function(){
   });
 
   $(".backstretch-carousel").backstretch([
-    "./img/bg-services.jpg",
+    //"./img/bg-services.jpg",
     "./img/bg-gallery1.jpg",
     "./img/bg-gallery2.jpg"],
     {duration:1000,fade:1000});
@@ -39,10 +39,12 @@ $(document).ready(function(){
       var imgSrc = $(event.currentTarget).attr("src");
       var newSrc = imgSrc.replace(".jpg", "Tint.jpg");
       $(event.currentTarget).attr("src", newSrc);
+      $('.gall-img-desc').addClass('animated fadeInDown');
   },function(){
       var imgSrc = $(event.currentTarget).attr("src");
       var newSrc = imgSrc.replace("Tint.jpg", ".jpg");
       $(event.currentTarget).attr("src", newSrc);
+      $('.gall-img-desc').removeClass('animated fadeInDown');
   });
   //$(document).resize(setImgSize());
 });
