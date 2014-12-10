@@ -35,16 +35,19 @@ $(document).ready(function(){
 
   setImgSize();
 
-  $('.gall-image').hover(function(event){
-      var imgSrc = $(event.currentTarget).attr("src");
-      var newSrc = imgSrc.replace(".jpg", "Tint.jpg");
-      $(event.currentTarget).attr("src", newSrc);
-      $('.gall-img-desc').addClass('animated fadeInDown');
+
+  $('.img-window').hover(function(event){
+      var img = $(this).children('.gall-image');
+      var imgSrc = img.attr("src");
+      var newSrc = imgSrc.replace(".png", "Tint.png");
+      img.attr("src", newSrc);
+      $(this).children('.gall-img-desc').addClass('animated fadeInDown').css('display', 'block');
   },function(){
-      var imgSrc = $(event.currentTarget).attr("src");
-      var newSrc = imgSrc.replace("Tint.jpg", ".jpg");
-      $(event.currentTarget).attr("src", newSrc);
-      $('.gall-img-desc').removeClass('animated fadeInDown');
+      var img = $(this).children('.gall-image');
+      var imgSrc = img.attr("src");
+      var newSrc = imgSrc.replace("Tint.png" ,".png");
+      img.attr("src", newSrc);
+      $(this).children('.gall-img-desc').removeClass('animated fadeInDown').css('display', 'none');
   });
   //$(document).resize(setImgSize());
 });
