@@ -16,7 +16,7 @@ $(document).ready(function(){
   });
 
   $(".backstretch-carousel").backstretch([
-    //"./img/bg-services.jpg",
+    "./img/bg-services.jpg",
     "./img/bg-gallery1.jpg",
     "./img/bg-gallery2.jpg"],
     {duration:1000,fade:1000});
