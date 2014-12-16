@@ -5,7 +5,12 @@ var setImgSize = function (){
     $('.img-window > img').height(imgWidth * 1/1.5121951219512195121951219512195);*/
     var winWidth = $('.img-window').width();
     $('.gall-image').height(winWidth * 1/1.333333);
-    $('.gall-image').width('100%');
+    if($(document).width() < 768){
+      $('.img-window').css('padding', '0 25.186567164179104477611940298507%');
+      $('.gall-image').width('80%');
+    } else {
+      $('.gall-image').width('100%');
+    }
 };
 
 $(document).ready(function(){
@@ -49,5 +54,5 @@ $(document).ready(function(){
       img.attr("src", newSrc);
       $(this).children('.gall-img-desc').removeClass('animated fadeInDown').css('display', 'none');
   });
-  //$(document).resize(setImgSize());
+  window.onresize = setImageSize;
 });
