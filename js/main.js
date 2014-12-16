@@ -55,4 +55,7 @@ $(document).ready(function(){
       img.attr("src", newSrc);
       $(this).children('.gall-img-desc').removeClass('animated fadeInDown').css('display', 'none');
   });
+
+  
+
 });
