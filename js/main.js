@@ -1,3 +1,4 @@
+window.onresize = setImgSize;
 var setImgSize = function (){
     /*var imgWindowWidth = $('.img-window').width();
     $('.img-window > img').width(.7816128773924881877152238327861 * imgWindowWidth);
@@ -54,5 +55,4 @@ $(document).ready(function(){
       img.attr("src", newSrc);
       $(this).children('.gall-img-desc').removeClass('animated fadeInDown').css('display', 'none');
   });
-  window.onresize = setImageSize;
 });
